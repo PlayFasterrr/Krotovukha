@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/banka"
+        android:enabled="true"
+        android:title="Banka"
+        android:icon="@drawable/banka"
+        android:orderInCategory="1"/>
+
+    <item
+        android:id="@+id/ingredients"
+        android:enabled="true"
+        android:title="Ingredients"
+        android:icon="@drawable/ingredients"
+        android:orderInCategory="2"/>
+    <item
+        android:id="@+id/lights"
+        android:enabled="true"
+        android:title="Lights"
+        android:icon="@drawable/light"
+        android:orderInCategory="3"/>
+    <item
+        android:id="@+id/settings"
+        android:enabled="true"
+        android:title="Settings"
+        android:icon="@drawable/settings"
+        android:orderInCategory="4"/>
+
+</menu>
