@@ -15,24 +15,24 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.ivHat.visibility = View.INVISIBLE
         binding.bottomMenu.selectedItemId = R.id.banka
-        binding.bottomMenu.setOnNavigationItemSelectedListener{ it ->
-            when(it.itemId){
+        binding.bottomMenu.setOnNavigationItemSelectedListener { it ->
+            when (it.itemId) {
                 R.id.banka -> {
                     binding.fragment.visibility = View.GONE
                 }
 
                 R.id.ingredients -> {
                     supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.fragment, Ingredients.newInstance())
-                    .commit()
+                        .beginTransaction()
+                        .replace(R.id.fragment, Ingredients.newInstance())
+                        .commit()
                     binding.apply {
                         fragment.visibility = View.VISIBLE
                     }
                     dataModel.something.observe(this) {
                         binding.ivBanka.setImageResource(it)
                     }
-                    
+
                 }
 
                 R.id.lights -> {
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
                         .commit()
                     binding.apply {
                         fragment.visibility = View.VISIBLE
-                        }
+                    }
                     dataModel.hat.observe(this) {
                         binding.ivHat.visibility = it as Int
                     }
